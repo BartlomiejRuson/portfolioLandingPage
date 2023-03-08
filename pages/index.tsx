@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Grid, Paper } from "@mui/material";
 import Box from "@mui/material/Box";
 import Head from "next/head";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 export default function Home() {
+  const cardTitles = ["Just", "Landing", "Page"];
   return (
     <>
       <Head>
@@ -72,6 +73,7 @@ export default function Home() {
           >
             <Button
               size="large"
+              href="#Services"
               sx={{
                 display: { xs: "none", sm: "flex" },
                 color: "whitesmoke",
@@ -84,14 +86,66 @@ export default function Home() {
             </Button>
           </Box>
         </Container>
-
       </main>
-      <Container
-          sx={{
-            color: "whitesmoke",
-            height: "100vh",
-          }}
-        ></Container>
+      <Typography
+        id="Services"
+        variant="h1"
+        sx={{
+          textAlign: "center",
+          my: 5,
+          color: "#9B3DB9",
+        }}
+      >
+        Seriously
+      </Typography>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          color: "whitesmoke",
+          height: "100vh",
+          mt: 10,
+          textAlign: "center",
+        }}
+      >
+        {cardTitles.map((item, index) => (
+          <Grid item xs={12} md={4} key={index}>
+            <Paper elevation={5}>
+              <Typography
+                variant="h2"
+                sx={{
+                  color: "black",
+                  p: 1,
+                }}
+              >
+                {item}
+              </Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: "17px",
+                  p: 3,
+                }}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                dignissimos cum architecto magnam ullam animi nostrum amet quos
+                expedita, aspernatur adipisci at mollitia enim dolor molestiae
+                magni culpa rerum facere unde cupiditate? Dignissimos, possimus!
+                Sint consequatur cum sed tempore consectetur.
+              </Typography>
+              <Button
+                variant="contained"
+                href="#"
+                sx={{
+                  mb: 3,
+                }}
+              >
+                Back to the top
+              </Button>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
 }
