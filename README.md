@@ -1,7 +1,7 @@
 
-## Just landing page
+# Just landing page
 
-# This is just landing page i made to get familiar with MaterialUI
+## This is just a landing page i made to get familiar with MaterialUI
 
 tech used:
 React
