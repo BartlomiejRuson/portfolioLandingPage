@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 
 export default function Home() {
-  const cardTitles = ["Just", "Landing", "Page"];
+  const cardTitles:string[] = ["Just", "Landing", "Page"];
   const [isDrawerOpen, setisDrawerOpen] = useState(false);
 
   return (
@@ -69,6 +69,7 @@ export default function Home() {
               px: 10,
             }}
             variant="h2"
+            data-testid="titleHeader"
           >
             It&apos;s just landing page
           </Typography>
